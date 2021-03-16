@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>to do list</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="font/all.css"/>
+</head>
+<body>
+<div class="page-title">
+    <h1>Today's To Do List</h1>
+</div>
+<div>
+<div class="filter-select-section">
+    <p> How do you like your todo cards to be sorted?</p>
+    <!--    do ta a ke color va priority hastan va roo har kodoon click kone ye drop down baz mishe-->
+</div>
+<div class="add-to-do-section">
+    <p> please enter the information of your task below:
+        <br>
+        <span>all of the fields are required!</span>
+    </p>
+    <label>
+        <input placeholder="Task">
+    </label>
+    <label>
+        <select name="priority" class="priority">
+            <option value="">priority:</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+    </label>
+    <label>
+        <select name="colors" class="colors">
+            <option value="">color:</option>
+            <option value="bg-green">Green</option>
+            <option value="bg-yellow"> Yellow</option>
+            <option value="bg-red">Red</option>
+            <option value="bg-orange">Orange</option>
+        </select>
+    </label>
+</div>
+</div>
+</body>
+<script src="main.js"></script>
+</html>
