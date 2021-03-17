@@ -32,7 +32,8 @@ function observe(fn) {
 }
 
 function dep() {
-    console.log(data.todoList)
+    // console.log(data.todoList)
+    return data.todoList;
 }
 observe(dep);
 
@@ -44,39 +45,47 @@ function addTodo(cardName, cardColor, cardPriority) {
     const todo = {id: Date.now(), title: cardName, color: cardColor, priority: cardPriority, state: "undone"};
     data.todoList = [...todoListCopy, todo]
 }
-//test
-addTodo("wtf", "blue", "high");
+
+console.log("add to do test;")
+addTodo("yasmin", "white", "high");
+addTodo("ahmadReza", "black", "medium");
+addTodo("ehsan", "yellow", "low");
+console.log(data.todoList)
 
 function removeTodo(id) {
-    data.todoList.forEach(e => {
-        if (e.id === id) {
-            todoListCopy.splice(id, 1);
-            getArrayCopy()
+    for (let i = 0; i < data.todoList.length ; i++) {
+        if( data.todoList[i].id === id ){
+            todoListCopy.splice(i, 1);
+            getArrayCopy();
+            break;
         }
-    })
+    }
 }
-//test
-// removeTodo(0);
+console.log("remove test")
+removeTodo(data.todoList[1]);
 
 function changeState(id) {
     for (let todoListElement of data.todoList) {
         if (todoListElement.id === id) {
             if (todoListElement.state === "done") {
-                todoListElement.state = "undone"
-                getArrayCopy()
+                todoListElement.state = "undone";
+                getArrayCopy();
             }
             if (todoListElement.state === "undone" ){
                 todoListElement.state = "done";
                 getArrayCopy();
-                console.log(" state changed")
+                console.log("state changed")
+                let temp;
+                temp = todoListElement;
+                removeTodo(id);
+                data.todoList =  [...todoListCopy, temp]
             }
-            // break;
+            break;
         }
     }
 }
-//test
-changeState(Date.now());
-changeState(0)
+console.log("change state test")
+changeState(data.todoList[2].id);
 
 function pin(id){
     for (let todoListElement of data.todoList) {
@@ -87,9 +96,21 @@ function pin(id){
             removeTodo(id);
             data.todoList = [temp, ...todoListCopy]
             console.log(data.todoList)
+            console.log("pinned successfully")
+            break;
         }
     }
 }
-
 console.log("pin test")
-pin(Date.now());
+pin(data.todoList[1].id);
+
+// function sort(filter){
+//     for (const todoListElement of data.todoList) {
+//         if (todoListElement.isPinned === false) {
+//
+//         }
+//     }
+// }
+// function costumeFilter(){
+//
+// }
