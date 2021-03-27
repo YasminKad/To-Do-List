@@ -4,45 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>to do list</title>
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="font/all.css"/>
+    <link rel="stylesheet" type="text/css" href="all.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-<div class="page-title">
-    <h1>Today's To Do List</h1>
+<div class="navbar">
+    <div class="page-title">
+        To Do List
+    </div>
+        <div class="filter-select-section">
+            <p class="title">Filter Your Cards</p>
+            <p class="question">choose the color:</p><br>
+            <div class="color-buttons">
+                <a class="green-button">Green</a>
+                <a class="red-button">Red</a>
+                <a class="blue-button">Blue</a>
+            </div>
+        </div>
+        <div class="add-to-do-section">
+            <p class="title">Make A To Do Card</p>
+            <p class="please-add-info"> please enter the information of your task below:
+                <br>
+                <span>(all of the fields are required!)</span>
+            </p>
+            <div class="input-select-container">
+                <label>
+                    <input class="task-input" placeholder="Task">
+                </label>
+                <label>
+                    <select name="priority" class="priority-select">
+                        <option value="">priority:</option>
+                        <option value="High" class="value-high">High</option>
+                        <option value="Medium" class="value-medium">Medium</option>
+                        <option value="Low" class="value-low">Low</option>
+                    </select>
+                </label>
+                <label>
+                    <select name="colors" class="colors-select">
+                        <option value="">color:</option>
+                        <option value="bg-green" class="value-green">Green</option>
+                        <option value="bg-blue" class="value-blue"> Yellow</option>
+                        <option value="bg-red" class="value-red">Red</option>
+                    </select>
+                </label>
+            </div>
+            <button class="add-button"><i class="fas fa-plus"></i></button>
+        </div>
 </div>
-<div>
-<div class="filter-select-section">
-    <p> How do you like your todo cards to be sorted?</p>
-    <!--    do ta a ke color va priority hastan va roo har kodoon click kone ye drop down baz mishe-->
-</div>
-<div class="add-to-do-section">
-    <p> please enter the information of your task below:
-        <br>
-        <span>all of the fields are required!</span>
-    </p>
-    <label>
-        <input placeholder="Task">
-    </label>
-    <label>
-        <select name="priority" class="priority">
-            <option value="">priority:</option>
-            <option value="High">High</option>
-            <option value="Medium">Medium</option>
-            <option value="Low">Low</option>
-        </select>
-    </label>
-    <label>
-        <select name="colors" class="colors">
-            <option value="">color:</option>
-            <option value="bg-green">Green</option>
-            <option value="bg-yellow"> Yellow</option>
-            <option value="bg-red">Red</option>
-            <option value="bg-orange">Orange</option>
-        </select>
-    </label>
-</div>
-</div>
+
+<div class="to-do-container"></div>
 </body>
 <script src="main.js"></script>
 </html>

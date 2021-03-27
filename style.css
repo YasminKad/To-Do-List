@@ -1,0 +1,227 @@
+@font-face {
+  font-family: EBG;
+  src: url("./font/EBG-regular.ttf");
+}
+body {
+  background-color: #173F5F;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  display: grid;
+  grid-template-columns: 0.25fr 0.75fr;
+}
+
+.page-title {
+  color: white;
+  font-size: 60px;
+  font-weight: 500;
+  text-align: center;
+  background-color: darkorange;
+  border-radius: 50px;
+  border: 3px white solid;
+  margin: 20px 0 20px 20px;
+  padding: 12px 30px;
+  display: block;
+}
+
+.filter-select-section {
+  color: white;
+  background-color: salmon;
+  margin: 0 0 20px 20px;
+  border-radius: 50px;
+  border: 3px white solid;
+  display: block;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+.filter-select-section .title {
+  text-align: center;
+  font-size: 40px;
+  padding-top: 12px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.filter-select-section .question {
+  text-align: center;
+  font-size: 20px;
+  display: block;
+  margin: 0 0 5px;
+}
+.filter-select-section .color-buttons {
+  margin: auto;
+  width: fit-content;
+}
+.filter-select-section a {
+  font-size: 20px;
+  display: block;
+  padding: 9px 25px;
+  border-radius: 50px;
+  margin: 0 5px 20px 5px;
+  border: 2px white solid;
+  text-align: center;
+  alignment: center;
+  transition-duration: 0.3s;
+  width: 50px;
+}
+.filter-select-section .green-button {
+  background-color: forestgreen;
+}
+.filter-select-section .green-button:hover {
+  cursor: pointer;
+  border-color: forestgreen;
+  transition-duration: 0.3s;
+}
+.filter-select-section .red-button {
+  background-color: #ED553B;
+}
+.filter-select-section .red-button:hover {
+  cursor: pointer;
+  border-color: #ED553B;
+  transition-duration: 0.3s;
+}
+.filter-select-section .blue-button {
+  background-color: cornflowerblue;
+}
+.filter-select-section .blue-button:hover {
+  cursor: pointer;
+  border-color: cornflowerblue;
+  transition-duration: 0.3s;
+}
+
+.add-to-do-section {
+  display: block;
+  color: white;
+  background-color: slateblue;
+  border-radius: 50px;
+  border: 3px white solid;
+  margin: 0 0 20px 20px;
+}
+.add-to-do-section .title {
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
+  padding-top: 12px;
+}
+.add-to-do-section .please-add-info {
+  text-align: center;
+  font-size: 20px;
+  display: block;
+  margin: 5px;
+}
+.add-to-do-section .input-select-container {
+  width: fit-content;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.add-to-do-section .task-input {
+  border: 2px white solid;
+  border-radius: 50px;
+  height: 34px;
+  padding-left: 10px;
+  background-color: lightpink;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: gray;
+  display: block;
+  margin-bottom: 15px;
+}
+.add-to-do-section .priority-select {
+  border: 2px white solid;
+  border-radius: 50px;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: lightpink;
+  color: gray;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.add-to-do-section .priority-select .value-high {
+  background-color: #B76E79;
+  color: white;
+}
+.add-to-do-section .priority-select .value-medium {
+  background-color: #D48893;
+}
+.add-to-do-section .priority-select .value-low {
+  background-color: #F1A3AD;
+  color: black;
+}
+.add-to-do-section .colors-select {
+  border: 2px white solid;
+  border-radius: 50px;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: lightpink;
+  color: gray;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.add-to-do-section .colors-select .value-blue {
+  background-color: cornflowerblue;
+  color: white;
+}
+.add-to-do-section .colors-select .value-green {
+  background-color: forestgreen;
+  color: white;
+}
+.add-to-do-section .colors-select .value-red {
+  background-color: #ED553B;
+  color: white;
+}
+.add-to-do-section .add-button {
+  background-color: lightpink;
+  border-radius: 50px;
+  border: 2px white solid;
+  font-size: 30px;
+  text-align: center;
+  padding: 12px 15px;
+  margin: 0 auto 20px auto;
+  display: block;
+  width: fit-content;
+  color: gray;
+}
+
+.to-do-container {
+  overflow-y: scroll;
+}
+
+.todo-card-style {
+  border: 2px white solid;
+  border-radius: 50px;
+  background-color: orange;
+  display: block;
+  margin: 20px 20px;
+  color: white;
+  padding: 12px 25px;
+  font-size: 25px;
+  position: relative;
+}
+.todo-card-style button {
+  background-color: transparent;
+  color: white;
+  padding: 5px;
+  margin: 10px;
+  border: 0;
+  font-size: 25px;
+  position: absolute;
+}
+.todo-card-style .pin-button {
+  right: 12%;
+  top: 0;
+}
+.todo-card-style .check-button {
+  right: 7%;
+  top: 0;
+}
+.todo-card-style .delete-button {
+  right: 2%;
+  top: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

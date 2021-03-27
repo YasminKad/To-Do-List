@@ -3,13 +3,255 @@
   src: url("./font/EBG-regular.ttf");
 }
 
-body{
+body {
   background-color: #173F5F;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  display: grid;
+  grid-template-columns: 0.25fr 0.75fr;
 }
 
-.page-title{
+.navbar {
+}
+
+.page-title {
   color: white;
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 500;
   text-align: center;
+  background-color: darkorange;
+  //width: fit-content;
+  border-radius: 50px;
+  border: 3px white solid;
+  margin: 20px 0 20px 20px;
+  padding: 12px 30px;
+  display: block;
+}
+
+.filter-select-section {
+  color: white;
+  background-color: salmon;
+  margin: 0 0 20px 20px;
+  border-radius: 50px;
+  border: 3px white solid;
+  display: block;
+  padding-right: 12px;
+  padding-left: 12px;
+
+  .title {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 12px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .question {
+    text-align: center;
+    font-size: 20px;
+    display: block;
+    margin: 0 0 5px;
+  }
+
+  .color-buttons {
+    margin: auto;
+    width: fit-content;
+  }
+
+  a {
+    font-size: 20px;
+    display: block;
+    padding: 9px 25px;
+    border-radius: 50px;
+    margin: 0 5px 20px 5px;
+    border: 2px white solid;
+    text-align: center;
+    alignment: center;
+    transition-duration: 0.3s;
+    width: 50px;
+  }
+
+  .green-button {
+    background-color: forestgreen;
+  }
+
+  .green-button:hover {
+    cursor: pointer;
+    border-color: forestgreen;
+    transition-duration: 0.3s;
+  }
+
+  .red-button {
+    background-color: #ED553B;
+  }
+
+  .red-button:hover {
+    cursor: pointer;
+    border-color: #ED553B;
+    transition-duration: 0.3s;
+  }
+
+  .blue-button {
+    background-color: cornflowerblue;
+  }
+
+  .blue-button:hover {
+    cursor: pointer;
+    border-color: cornflowerblue;
+    transition-duration: 0.3s;
+  }
+}
+
+.add-to-do-section {
+  display: block;
+  color: white;
+  background-color: slateblue;
+  border-radius: 50px;
+  border: 3px white solid;
+  margin: 0 0 20px 20px;
+
+  .title {
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    padding-top: 12px;
+  }
+
+  .please-add-info {
+    text-align: center;
+    font-size: 20px;
+    display: block;
+    margin: 5px;
+  }
+
+  .input-select-container {
+    width: fit-content;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .task-input {
+    border: 2px white solid;
+    border-radius: 50px;
+    height: 34px;
+    padding-left: 10px;
+    background-color: lightpink;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: gray;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .priority-select {
+    border: 2px white solid;
+    border-radius: 50px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: lightpink;
+    color: gray;
+    margin-right: 5px;
+    margin-left: 5px;
+
+    .value-high {
+      background-color: #B76E79;
+      color: white;
+    }
+
+    .value-medium {
+      background-color: #D48893;
+    }
+
+    .value-low {
+      background-color: #F1A3AD;
+      color: black;
+    }
+  }
+
+  .colors-select {
+    border: 2px white solid;
+    border-radius: 50px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: lightpink;
+    color: gray;
+    margin-right: 5px;
+    margin-left: 5px;
+
+    .value-blue {
+      background-color: cornflowerblue;
+      color: white;
+    }
+
+    .value-green {
+      background-color: forestgreen;
+      color: white;
+    }
+
+    .value-red {
+      background-color: #ED553B;
+      color: white;
+    }
+  }
+
+  .add-button {
+    background-color: lightpink;
+    border-radius: 50px;
+    border: 2px white solid;
+    font-size: 30px;
+    text-align: center;
+    padding: 12px 15px;
+    margin: 0 auto 20px auto;
+    display: block;
+    width: fit-content;
+    color: gray;
+  }
+}
+
+.to-do-container {
+  overflow-y: scroll;
+}
+
+.todo-card-style {
+  border: 2px white solid;
+  border-radius: 50px;
+  background-color: orange;
+  display: block;
+  margin: 20px 20px;
+  color: white;
+  padding: 12px 25px;
+  font-size: 25px;
+  position: relative;
+
+  button {
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    margin: 10px;
+    border: 0;
+    font-size: 25px;
+    position: absolute;
+  }
+
+  .pin-button {
+    right: 12%;
+    top: 0;
+  }
+
+  .check-button {
+    right: 7%;
+    top: 0;
+  }
+
+  .delete-button {
+    right: 2%;
+    top: 0;
+  }
 }
