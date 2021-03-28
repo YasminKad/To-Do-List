@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41dbc9f6-0da0-4179-bddf-4ecd2a944c9b" name="Default Changelist" comment="sort function for the main display added">
+    <list default="true" id="41dbc9f6-0da0-4179-bddf-4ecd2a944c9b" name="Default Changelist" comment="UI corrections">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
@@ -77,7 +77,8 @@
       <workItem from="1615965246246" duration="18110000" />
       <workItem from="1616830506036" duration="2743000" />
       <workItem from="1616840454028" duration="15933000" />
-      <workItem from="1616913124895" duration="3558000" />
+      <workItem from="1616913124895" duration="9216000" />
+      <workItem from="1616923917870" duration="5371000" />
     </task>
     <task id="LOCAL-00001" summary="reactivity, add, remove, change state, pin enabled">
       <created>1615975433616</created>
@@ -100,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616857151924</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="UI corrections">
+      <created>1616916694343</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616916694343</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +131,8 @@
     <MESSAGE value="reactivity, add, remove, change state, pin enabled" />
     <MESSAGE value="sort function for the main display added" />
     <MESSAGE value="UI designed + buttons added + filter section added + make todo section added + todo card info added ( !done the pinned bug! )" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI designed + buttons added + filter section added + make todo section added + todo card info added ( !done the pinned bug! )" />
+    <MESSAGE value="UI corrections" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI corrections" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -191,7 +191,7 @@ body {
   border: 2px white solid;
   font-size: 30px;
   text-align: center;
-  padding: 12px 15px;
+  padding: 12px 15px 9px;
   margin: 0 auto 20px auto;
   display: block;
   width: fit-content;
@@ -233,6 +233,119 @@ body {
 .todo-card-style .delete-button {
   right: 2%;
   top: 0;
+}
+
+/*** responsive section ***/
+@media screen and (max-width: 1145px) and (min-width: 1115px) {
+  body {
+    display: flex;
+  }
+}
+@media screen and (max-width: 1115px) and (min-width: 876px) {
+  body {
+    display: initial;
+  }
+
+  .navbar {
+    height: fit-content;
+  }
+
+  .page-title {
+    margin: 20px 20px 20px 20px;
+  }
+
+  .filter-select-section {
+    display: inline-block;
+    margin: 0 10px 0 20px;
+    width: 45%;
+  }
+  .filter-select-section .title {
+    padding-top: 23px;
+    margin-bottom: 5px;
+  }
+  .filter-select-section .question {
+    margin-bottom: 0;
+  }
+  .filter-select-section .color-buttons {
+    margin-bottom: 0;
+  }
+  .filter-select-section a {
+    margin-bottom: 15px;
+  }
+
+  .add-to-do-section {
+    display: inline-block;
+    margin: 0 20px 20px 10px;
+    width: 45%;
+    position: absolute;
+  }
+  .add-to-do-section .title {
+    margin-top: 18px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+  .add-to-do-section .input-select-container {
+    display: inline-block;
+    margin-left: 130px;
+  }
+  .add-to-do-section .add-button {
+    display: inline-block;
+    position: absolute;
+    margin-top: 43px;
+  }
+}
+@media screen and (max-width: 875px) {
+  body {
+    display: initial;
+    height: 90vh;
+  }
+
+  .navbar {
+    height: inherit;
+  }
+
+  .page-title {
+    margin: 20px 20px 20px 20px;
+  }
+
+  .filter-select-section {
+    display: block;
+    margin: 0 20px 20px 20px;
+  }
+  .filter-select-section .title {
+    padding-top: 23px;
+    margin-bottom: 5px;
+  }
+  .filter-select-section .question {
+    margin-bottom: 0;
+  }
+  .filter-select-section .color-buttons {
+    margin-bottom: 0;
+  }
+  .filter-select-section a {
+    margin-bottom: 15px;
+  }
+
+  .add-to-do-section {
+    display: block;
+    margin: 0 20px 20px 20px;
+    position: absolute;
+    width: -webkit-fill-available;
+  }
+  .add-to-do-section .title {
+    margin-top: 18px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+  .add-to-do-section .input-select-container {
+    display: inline-block;
+    margin-left: 300px;
+  }
+  .add-to-do-section .add-button {
+    display: inline-block;
+    position: absolute;
+    margin-top: 43px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
