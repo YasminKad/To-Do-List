@@ -5,17 +5,19 @@
 
 body {
   background-color: #173F5F;
-  height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
   display: grid;
-  grid-template-columns: 0.25fr 0.75fr;
+  grid-template-columns: 0.2fr 0.8fr;
+  height: 100vh;
 }
 
 .navbar {
+  display: flow-root;
+  height: 100vh;
 }
 
 .page-title {
@@ -28,8 +30,13 @@ body {
   border-radius: 50px;
   border: 3px white solid;
   margin: 20px 0 20px 20px;
-  padding: 12px 30px;
+  padding: 12px 30px !important;
   display: block;
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .filter-select-section {
@@ -45,7 +52,7 @@ body {
   .title {
     text-align: center;
     font-size: 40px;
-    padding-top: 12px;
+    padding-top: 20px;
     margin-top: 0;
     margin-bottom: 10px;
   }
@@ -118,7 +125,8 @@ body {
     text-align: center;
     font-size: 40px;
     margin: 0;
-    padding-top: 12px;
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
 
   .please-add-info {
@@ -126,6 +134,7 @@ body {
     font-size: 20px;
     display: block;
     margin: 5px;
+    line-height: 30px;
   }
 
   .input-select-container {
@@ -145,7 +154,7 @@ body {
     margin-left: 5px;
     color: gray;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .priority-select {

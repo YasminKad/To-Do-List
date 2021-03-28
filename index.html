@@ -10,46 +10,46 @@
 <body>
 <div class="navbar">
     <div class="page-title">
-        To Do List
+        <p>To Do List</p>
     </div>
-        <div class="filter-select-section">
-            <p class="title">Filter Your Cards</p>
-            <p class="question">choose the color:</p><br>
-            <div class="color-buttons">
-                <a class="green-button">Green</a>
-                <a class="red-button">Red</a>
-                <a class="blue-button">Blue</a>
-            </div>
+    <div class="filter-select-section">
+        <p class="title">Filter Your Cards</p>
+        <p class="question">choose the color:</p><br>
+        <div class="color-buttons">
+            <a class="green-button">Green</a>
+            <a class="red-button">Red</a>
+            <a class="blue-button">Blue</a>
         </div>
-        <div class="add-to-do-section">
-            <p class="title">Make A To Do Card</p>
-            <p class="please-add-info"> please enter the information of your task below:
-                <br>
-                <span>(all of the fields are required!)</span>
-            </p>
-            <div class="input-select-container">
-                <label>
-                    <input class="task-input" placeholder="Task">
-                </label>
-                <label>
-                    <select name="priority" class="priority-select">
-                        <option value="">priority:</option>
-                        <option value="High" class="value-high">High</option>
-                        <option value="Medium" class="value-medium">Medium</option>
-                        <option value="Low" class="value-low">Low</option>
-                    </select>
-                </label>
-                <label>
-                    <select name="colors" class="colors-select">
-                        <option value="">color:</option>
-                        <option value="bg-green" class="value-green">Green</option>
-                        <option value="bg-blue" class="value-blue"> Yellow</option>
-                        <option value="bg-red" class="value-red">Red</option>
-                    </select>
-                </label>
-            </div>
-            <button class="add-button"><i class="fas fa-plus"></i></button>
+    </div>
+    <div class="add-to-do-section">
+        <p class="title">Make A Card</p>
+        <p class="please-add-info"> please enter the information of your task below:
+            <br>
+            <span>(all of the fields are required!)</span>
+        </p>
+        <div class="input-select-container">
+            <label>
+                <input class="task-input" placeholder="Task">
+            </label>
+            <label>
+                <select name="priority" class="priority-select">
+                    <option value="">priority:</option>
+                    <option value="High" class="value-high">High</option>
+                    <option value="Medium" class="value-medium">Medium</option>
+                    <option value="Low" class="value-low">Low</option>
+                </select>
+            </label>
+            <label>
+                <select name="colors" class="colors-select">
+                    <option value="">color:</option>
+                    <option value="bg-green" class="value-green">Green</option>
+                    <option value="bg-blue" class="value-blue"> Yellow</option>
+                    <option value="bg-red" class="value-red">Red</option>
+                </select>
+            </label>
         </div>
+        <button class="add-button"><i class="fas fa-plus"></i></button>
+    </div>
 </div>
 
 <div class="to-do-container"></div>
