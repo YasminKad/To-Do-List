@@ -245,9 +245,6 @@ function renderDom() {
     })
 }
 
-observe(sort)
-observe(renderDom)
-
 const sortGreenButton = document.querySelector(".green-button")
 sortGreenButton.addEventListener('click', showGreenCards)
 
@@ -271,26 +268,49 @@ function showYellowCards() {
     document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
     document.querySelectorAll(".bg-is-yellow").forEach(e => (e.style.display = 'block'))
 }
+
 const addButton = document.querySelector(".add-button");
-addButton.addEventListener('click', checkValidation);
+addButton.addEventListener('click', checkValidationAndMakeACard);
 const taskName = document.querySelector("input");
 const selectors = document.querySelectorAll("select");
 
-function checkValidation() {
-        if (taskName.value === "") {
-            taskName.classList.remove("input-is-okay", "input-is-empty");
-            taskName.classList.add("input-is-empty");
-        } else {
-            taskName.classList.remove("input-is-empty", "input-is-okay");
-            taskName.classList.add("input-is-okay")
-        }
+function checkValidationAndMakeACard() {
+    let finalBoolean = true;
+    if (taskName.value === "") {
+        taskName.classList.remove("input-is-okay", "input-is-empty");
+        taskName.classList.add("input-is-empty");
+        finalBoolean = false
+    } else {
+        taskName.classList.remove("input-is-empty", "input-is-okay");
+        taskName.classList.add("input-is-okay")
+        finalBoolean = true
+    }
     selectors.forEach(e => {
         if (e.value === "") {
             e.classList.remove("input-is-okay", "input-is-empty");
             e.classList.add("input-is-empty");
+            finalBoolean = false
         } else {
             e.classList.remove("input-is-empty", "input-is-okay");
             e.classList.add("input-is-okay")
+            finalBoolean = true
         }
     })
+    if (finalBoolean) {
+        makeTodoCard()
+    }
 }
+
+function makeTodoCard(){
+    addTodo(taskName.value, selectors[1].value, selectors[0].value)
+    taskName.classList.remove("input-is-empty", "input-is-okay");
+    selectors.forEach(e => {
+        e.classList.remove("input-is-empty", "input-is-okay");
+    })
+    taskName.value = "";
+    selectors.forEach(e => {
+        e.value = ""
+    })
+}
+observe(sort)
+observe(renderDom)
