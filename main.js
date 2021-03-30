@@ -59,6 +59,7 @@ function createRandomId(num) {
     }
     return rand
 }
+
 // console.log(createRandomId(10))
 
 function addTodo(cardName, cardColor, cardPriority) {
@@ -128,10 +129,18 @@ function pin(id) {
     for (const todoListElement of data.todoList) {
         // console.log(todoListElement.id, id)
         if (todoListElement.id === id) {
-            todoListElement.isPinned = true
-            removeTodo(id)
-            data.todoList = [todoListElement, ...todoListCopy]
-            break
+            if (todoListElement.isPinned === false) {
+                todoListElement.isPinned = true
+                removeTodo(id)
+                data.todoList = [todoListElement, ...todoListCopy]
+                break
+            }
+            if(todoListElement.isPinned === true){
+                todoListElement.isPinned = false
+                removeTodo(id)
+                addTodo( todoListElement.name, todoListElement.color, todoListElement.priority)
+                break
+            }
         }
     }
 }
@@ -197,23 +206,23 @@ function renderDom() {
         todoCard.appendChild(deleteButton)
         deleteButton.onclick = () => removeTodo(e.id)
 
-        if(e.color === "yellow"){
+        if (e.color === "yellow") {
             todoCard.style.backgroundColor = "orange";
         }
 
-        if(e.color === "red"){
+        if (e.color === "red") {
             todoCard.style.backgroundColor = "#ED553B";
         }
 
-        if(e.color === "green"){
+        if (e.color === "green") {
             todoCard.style.backgroundColor = "forestgreen";
         }
 
-        if(e.state === "done") {
+        if (e.state === "done") {
             checkButton.innerHTML = '<i class="fas fa-times"></i>'
         }
 
-        if(e.state === "undone"){
+        if (e.state === "undone") {
             checkButton.innerHTML = '<i class="fas fa-check"></i>'
         }
 
