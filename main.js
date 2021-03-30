@@ -74,20 +74,8 @@ function addTodo(cardName, cardColor, cardPriority) {
 }
 
 // console.log("add to do test;")
-addTodo("yasmin", "white", "high")
-addTodo("ahmadReza", "black", "medium")
-addTodo("ehsan", "yellow", "medium")
-addTodo("yasmin", "white", "high")
-addTodo("ahmadReza", "black", "medium")
-addTodo("ehsan", "yellow", "medium")
-addTodo("yasmin", "white", "high")
-addTodo("ahmadReza", "black", "medium")
-addTodo("ehsan", "yellow", "medium")
-addTodo("yasmin", "white", "high")
-addTodo("ahmadReza", "black", "medium")
-addTodo("ehsan", "yellow", "medium")
-addTodo("yasmin", "white", "high")
-addTodo("ahmadReza", "black", "medium")
+addTodo("yasmin", "green", "high")
+addTodo("ahmadReza", "red", "medium")
 addTodo("ehsan", "yellow", "medium")
 
 // console.log(data.todoList)
@@ -202,6 +190,18 @@ function renderDom() {
         deleteButton.classList.add("delete-button")
         todoCard.appendChild(deleteButton)
         deleteButton.onclick = () => removeTodo(e.id)
+
+        if(e.color === "yellow"){
+            todoCard.style.backgroundColor = "orange";
+        }
+
+        if(e.color === "red"){
+            todoCard.style.backgroundColor = "#ED553B";
+        }
+
+        if(e.color === "green"){
+            todoCard.style.backgroundColor = "forestgreen";
+        }
 
         container.appendChild(todoCard)
 
