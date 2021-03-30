@@ -1,12 +1,5 @@
 const data = {
-    todoList: [{
-        id: 0,
-        title: "thisCardIsTheDefaultCard",
-        color: "yellow",
-        priority: "high",
-        state: "undone",
-        isPinned: true
-    }]
+    todoList: []
 }
 const priorityValues = {high: 2, medium: 1, low: 1}
 let todoListCopy = data.todoList
@@ -76,12 +69,12 @@ function addTodo(cardName, cardColor, cardPriority) {
 
 // console.log("add to do test;")
 addTodo("yasmin", "green", "high")
-addTodo("rosa", "green", "medium")
-addTodo("sahar", "green", "low")
+addTodo("rosa", "yellow", "medium")
+addTodo("sahar", "red", "low")
 addTodo("farid", "green", "high")
-addTodo("goli", "green", "medium")
+addTodo("goli", "yellow", "medium")
 addTodo("ahmadReza", "red", "low")
-addTodo("ehsan", "yellow", "high")
+addTodo("ehsan", "green", "high")
 
 // console.log(data.todoList)
 
@@ -156,7 +149,12 @@ pin(data.todoList[1].id)
 function sort() {
     const {pinned, notPinned, done} = data.todoList.reduce((prev, curr) => {
         if (curr.isPinned) {
-            return {...prev, pinned: [...prev.pinned, curr]}
+            if (curr.state === "undone") {
+                return {...prev, pinned: [...prev.pinned, curr]}
+            }
+            if (curr.state === "done") {
+                return {...prev, pinned: [...prev.pinned], done: [...prev.done, curr]}
+            }
         } else if (curr.state === "done") {
             return {...prev, done: [...prev.done, curr]}
         } else {
@@ -227,6 +225,7 @@ function renderDom() {
 
         if (e.state === "done") {
             checkButton.innerHTML = '<i class="fas fa-times"></i>'
+            checkButton.style.color = 'black'
         }
 
         if (e.state === "undone") {
@@ -254,7 +253,7 @@ sortGreenButton.addEventListener('click', showGreenCards)
 
 function showGreenCards() {
     document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
-    document.querySelectorAll(".bg-is-green").forEach( e =>(e.style.display = 'block'))
+    document.querySelectorAll(".bg-is-green").forEach(e => (e.style.display = 'block'))
 }
 
 const sortRedButton = document.querySelector(".red-button")
@@ -262,7 +261,7 @@ sortRedButton.addEventListener('click', showRedCards)
 
 function showRedCards() {
     document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
-    document.querySelectorAll(".bg-is-red").forEach( e =>(e.style.display = 'block'))
+    document.querySelectorAll(".bg-is-red").forEach(e => (e.style.display = 'block'))
 }
 
 const sortYellowButton = document.querySelector(".yellow-button")
@@ -270,5 +269,5 @@ sortYellowButton.addEventListener('click', showYellowCards)
 
 function showYellowCards() {
     document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
-    document.querySelectorAll(".bg-is-yellow").forEach( e =>(e.style.display = 'block'))
+    document.querySelectorAll(".bg-is-yellow").forEach(e => (e.style.display = 'block'))
 }

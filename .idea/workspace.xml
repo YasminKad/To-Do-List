@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41dbc9f6-0da0-4179-bddf-4ecd2a944c9b" name="Default Changelist" comment="pin button's color now depends on whether the card is pinned or not">
+    <list default="true" id="41dbc9f6-0da0-4179-bddf-4ecd2a944c9b" name="Default Changelist" comment="filter by color (yellow) function added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
@@ -79,7 +79,7 @@
       <workItem from="1616840454028" duration="15933000" />
       <workItem from="1616913124895" duration="9216000" />
       <workItem from="1616923917870" duration="7640000" />
-      <workItem from="1617087907746" duration="6921000" />
+      <workItem from="1617087907746" duration="8720000" />
     </task>
     <task id="LOCAL-00001" summary="reactivity, add, remove, change state, pin enabled">
       <created>1615975433616</created>
@@ -158,7 +158,28 @@
       <option name="project" value="LOCAL" />
       <updated>1617092483964</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="filter by color (green) function added">
+      <created>1617097395544</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1617097395545</updated>
+    </task>
+    <task id="LOCAL-00013" summary="filter by color (red) function added">
+      <created>1617097529615</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1617097529615</updated>
+    </task>
+    <task id="LOCAL-00014" summary="filter by color (yellow) function added">
+      <created>1617097704888</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1617097704888</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +210,10 @@
     <MESSAGE value="check button's icon now depends on the card state" />
     <MESSAGE value="unpin function enabled" />
     <MESSAGE value="pin button's color now depends on whether the card is pinned or not" />
-    <option name="LAST_COMMIT_MESSAGE" value="pin button's color now depends on whether the card is pinned or not" />
+    <MESSAGE value="filter by color (green) function added" />
+    <MESSAGE value="filter by color (red) function added" />
+    <MESSAGE value="filter by color (yellow) function added" />
+    <option name="LAST_COMMIT_MESSAGE" value="filter by color (yellow) function added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
