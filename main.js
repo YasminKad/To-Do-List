@@ -249,6 +249,10 @@ const sortGreenButton = document.querySelector(".green-button")
 sortGreenButton.addEventListener('click', showGreenCards)
 
 function showGreenCards() {
+    sortGreenButton.style.borderColor = 'forestgreen'
+    sortRedButton.style.borderColor = 'white'
+    sortYellowButton.style.borderColor = 'white'
+
     document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
     document.querySelectorAll(".bg-is-green").forEach(e => (e.style.display = 'block'))
 }
@@ -257,6 +261,10 @@ const sortRedButton = document.querySelector(".red-button")
 sortRedButton.addEventListener('click', showRedCards)
 
 function showRedCards() {
+    sortRedButton.style.borderColor = '#ED553B'
+    sortGreenButton.style.borderColor = 'white'
+    sortYellowButton.style.borderColor = 'white'
+
     document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
     document.querySelectorAll(".bg-is-red").forEach(e => (e.style.display = 'block'))
 }
@@ -265,6 +273,9 @@ const sortYellowButton = document.querySelector(".yellow-button")
 sortYellowButton.addEventListener('click', showYellowCards)
 
 function showYellowCards() {
+    sortYellowButton.style.borderColor = 'orange'
+    sortRedButton.style.borderColor = 'white'
+    sortGreenButton.style.borderColor = 'white'
     document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
     document.querySelectorAll(".bg-is-yellow").forEach(e => (e.style.display = 'block'))
 }
