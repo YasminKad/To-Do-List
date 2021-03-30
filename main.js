@@ -209,6 +209,14 @@ function renderDom() {
             todoCard.style.backgroundColor = "forestgreen";
         }
 
+        if(e.state === "done") {
+            checkButton.innerHTML = '<i class="fas fa-times"></i>'
+        }
+
+        if(e.state === "undone"){
+            checkButton.innerHTML = '<i class="fas fa-check"></i>'
+        }
+
         container.appendChild(todoCard)
 
         todoCard.classList.add("todo-card-style")
