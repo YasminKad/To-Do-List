@@ -212,7 +212,7 @@ function renderDom() {
 
         if (e.color === "yellow") {
             todoCard.style.backgroundColor = "orange";
-            todoCard.classList.add("bg-is-orange")
+            todoCard.classList.add("bg-is-yellow")
         }
 
         if (e.color === "red") {
@@ -255,4 +255,12 @@ sortGreenButton.addEventListener('click', showGreenCards)
 function showGreenCards() {
     document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
     document.querySelectorAll(".bg-is-green").forEach( e =>(e.style.display = 'block'))
+}
+
+const sortRedButton = document.querySelector(".red-button")
+sortRedButton.addEventListener('click', showRedCards)
+
+function showRedCards() {
+    document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
+    document.querySelectorAll(".bg-is-red").forEach( e =>(e.style.display = 'block'))
 }
