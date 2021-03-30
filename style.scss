@@ -102,13 +102,13 @@ body {
     transition-duration: 0.3s;
   }
 
-  .blue-button {
-    background-color: cornflowerblue;
+  .yellow-button {
+    background-color: orange;
   }
 
-  .blue-button:hover {
+  .yellow-button:hover {
     cursor: pointer;
-    border-color: cornflowerblue;
+    border-color: orange;
     transition-duration: 0.3s;
   }
 }
@@ -194,8 +194,8 @@ body {
     margin-right: 5px;
     margin-left: 5px;
 
-    .value-blue {
-      background-color: cornflowerblue;
+    .value-yellow {
+      background-color: orange;
       color: white;
     }
 

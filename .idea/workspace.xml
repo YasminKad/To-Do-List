@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41dbc9f6-0da0-4179-bddf-4ecd2a944c9b" name="Default Changelist" comment="UI corrections">
+    <list default="true" id="41dbc9f6-0da0-4179-bddf-4ecd2a944c9b" name="Default Changelist" comment="UI responsive design added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +77,8 @@
       <workItem from="1616830506036" duration="2743000" />
       <workItem from="1616840454028" duration="15933000" />
       <workItem from="1616913124895" duration="9216000" />
-      <workItem from="1616923917870" duration="5371000" />
+      <workItem from="1616923917870" duration="7640000" />
+      <workItem from="1617087907746" duration="437000" />
     </task>
     <task id="LOCAL-00001" summary="reactivity, add, remove, change state, pin enabled">
       <created>1615975433616</created>
@@ -108,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616916694343</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="UI responsive design added">
+      <created>1616932337125</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616932337125</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +139,8 @@
     <MESSAGE value="sort function for the main display added" />
     <MESSAGE value="UI designed + buttons added + filter section added + make todo section added + todo card info added ( !done the pinned bug! )" />
     <MESSAGE value="UI corrections" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI corrections" />
+    <MESSAGE value="UI responsive design added" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI responsive design added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -91,12 +91,12 @@ body {
   border-color: #ED553B;
   transition-duration: 0.3s;
 }
-.filter-select-section .blue-button {
-  background-color: cornflowerblue;
+.filter-select-section .yellow-button {
+  background-color: orange;
 }
-.filter-select-section .blue-button:hover {
+.filter-select-section .yellow-button:hover {
   cursor: pointer;
-  border-color: cornflowerblue;
+  border-color: orange;
   transition-duration: 0.3s;
 }
 
@@ -173,8 +173,8 @@ body {
   margin-right: 5px;
   margin-left: 5px;
 }
-.add-to-do-section .colors-select .value-blue {
-  background-color: cornflowerblue;
+.add-to-do-section .colors-select .value-yellow {
+  background-color: orange;
   color: white;
 }
 .add-to-do-section .colors-select .value-green {
