@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41dbc9f6-0da0-4179-bddf-4ecd2a944c9b" name="Default Changelist" comment="check button's icon now depends on the card state">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="41dbc9f6-0da0-4179-bddf-4ecd2a944c9b" name="Default Changelist" comment="unpin function enabled">
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +75,7 @@
       <workItem from="1616840454028" duration="15933000" />
       <workItem from="1616913124895" duration="9216000" />
       <workItem from="1616923917870" duration="7640000" />
-      <workItem from="1617087907746" duration="4146000" />
+      <workItem from="1617087907746" duration="4482000" />
     </task>
     <task id="LOCAL-00001" summary="reactivity, add, remove, change state, pin enabled">
       <created>1615975433616</created>
@@ -141,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617091042976</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="unpin function enabled">
+      <created>1617092160947</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1617092160947</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +176,8 @@
     <MESSAGE value="to do cards have their own color now" />
     <MESSAGE value="done bug fixed" />
     <MESSAGE value="check button's icon now depends on the card state" />
-    <option name="LAST_COMMIT_MESSAGE" value="check button's icon now depends on the card state" />
+    <MESSAGE value="unpin function enabled" />
+    <option name="LAST_COMMIT_MESSAGE" value="unpin function enabled" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

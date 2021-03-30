@@ -135,10 +135,10 @@ function pin(id) {
                 data.todoList = [todoListElement, ...todoListCopy]
                 break
             }
-            if(todoListElement.isPinned === true){
+            if (todoListElement.isPinned === true) {
                 todoListElement.isPinned = false
                 removeTodo(id)
-                addTodo( todoListElement.name, todoListElement.color, todoListElement.priority)
+                addTodo(todoListElement.name, todoListElement.color, todoListElement.priority)
                 break
             }
         }
@@ -224,6 +224,14 @@ function renderDom() {
 
         if (e.state === "undone") {
             checkButton.innerHTML = '<i class="fas fa-check"></i>'
+        }
+
+        if (e.isPinned === true) {
+            pinButton.style.color = "black"
+        }
+
+        if (e.isPinned === false) {
+            pinButton.style.color = "white"
         }
 
         container.appendChild(todoCard)
