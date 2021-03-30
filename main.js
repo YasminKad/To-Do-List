@@ -1,11 +1,11 @@
 const data = {
     todoList: [{
-        // id: 0,
-        // title: "task",
-        // color: "colorName",
-        // priority: "low",
-        // state: "done",
-        // isPinned: false
+        id: 0,
+        title: "thisCardIsTheDefaultCard",
+        color: "purple",
+        priority: "high",
+        state: "undone",
+        isPinned: true
     }]
 }
 const priorityValues = {high: 2, medium: 1, low: 1}
@@ -99,23 +99,30 @@ function changeState(id) {
             if (todoListElement.state === "done") {
                 todoListElement.state = "undone"
                 getArrayCopy()
+                let temp
+                temp = todoListElement
+                removeTodo(id)
+                data.todoList = [temp, ...todoListCopy]
+                // console.log("changed to undone " + `${temp.id}`)
+                break
             }
             if (todoListElement.state === "undone") {
                 todoListElement.state = "done"
                 getArrayCopy()
-                // console.log("state changed")
                 let temp
                 temp = todoListElement
                 removeTodo(id)
                 data.todoList = [...todoListCopy, temp]
+                // console.log("changed to done " +  `${todoListElement.id}`)
+                break
             }
-            break;
+            break
         }
     }
 }
 
 // console.log("change state test")
-changeState(data.todoList[2].id)
+// changeState(data.todoList[2].id)
 
 function pin(id) {
     for (const todoListElement of data.todoList) {
@@ -171,7 +178,6 @@ function renderDom() {
         const todoCard = document.createElement("div")
         todoCard.innerText = `${e.title} ${e.priority} ${e.color} ${e.state} ${e.isPinned} ${e.id}`
         todoCard.id = e.id
-
 
         const pinButton = document.createElement("button")
         pinButton.innerHTML = '<i class="fas fa-thumbtack"></i>'
