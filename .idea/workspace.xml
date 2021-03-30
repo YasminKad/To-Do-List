@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41dbc9f6-0da0-4179-bddf-4ecd2a944c9b" name="Default Changelist" comment="done bug in pinned cards fixed + default task deleted">
+    <list default="true" id="41dbc9f6-0da0-4179-bddf-4ecd2a944c9b" name="Default Changelist" comment="ui corrections">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
@@ -79,7 +79,7 @@
       <workItem from="1616840454028" duration="15933000" />
       <workItem from="1616913124895" duration="9216000" />
       <workItem from="1616923917870" duration="7640000" />
-      <workItem from="1617087907746" duration="9096000" />
+      <workItem from="1617087907746" duration="10617000" />
     </task>
     <task id="LOCAL-00001" summary="reactivity, add, remove, change state, pin enabled">
       <created>1615975433616</created>
@@ -186,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617099701107</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="ui corrections">
+      <created>1617099722680</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1617099722680</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +228,8 @@
     <MESSAGE value="filter by color (red) function added" />
     <MESSAGE value="filter by color (yellow) function added" />
     <MESSAGE value="done bug in pinned cards fixed + default task deleted" />
-    <option name="LAST_COMMIT_MESSAGE" value="done bug in pinned cards fixed + default task deleted" />
+    <MESSAGE value="ui corrections" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui corrections" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

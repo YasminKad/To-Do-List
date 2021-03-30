@@ -271,3 +271,26 @@ function showYellowCards() {
     document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
     document.querySelectorAll(".bg-is-yellow").forEach(e => (e.style.display = 'block'))
 }
+const addButton = document.querySelector(".add-button");
+addButton.addEventListener('click', checkValidation);
+const taskName = document.querySelector("input");
+const selectors = document.querySelectorAll("select");
+
+function checkValidation() {
+        if (taskName.value === "") {
+            taskName.classList.remove("input-is-okay", "input-is-empty");
+            taskName.classList.add("input-is-empty");
+        } else {
+            taskName.classList.remove("input-is-empty", "input-is-okay");
+            taskName.classList.add("input-is-okay")
+        }
+    selectors.forEach(e => {
+        if (e.value === "") {
+            e.classList.remove("input-is-okay", "input-is-empty");
+            e.classList.add("input-is-empty");
+        } else {
+            e.classList.remove("input-is-empty", "input-is-okay");
+            e.classList.add("input-is-okay")
+        }
+    })
+}

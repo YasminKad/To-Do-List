@@ -140,6 +140,7 @@ body {
   color: gray;
   display: block;
   margin-bottom: 20px;
+  transition-duration: 0.3s;
 }
 .add-to-do-section .priority-select {
   border: 2px white solid;
@@ -151,6 +152,7 @@ body {
   color: gray;
   margin-right: 5px;
   margin-left: 5px;
+  transition-duration: 0.3s;
 }
 .add-to-do-section .priority-select .value-high {
   background-color: #B76E79;
@@ -173,6 +175,7 @@ body {
   color: gray;
   margin-right: 5px;
   margin-left: 5px;
+  transition-duration: 0.3s;
 }
 .add-to-do-section .colors-select .value-yellow {
   background-color: orange;
@@ -237,6 +240,16 @@ body {
 
 .set-display-to-none {
   display: none !important;
+}
+
+.input-is-okay {
+  border-color: limegreen !important;
+  transition-duration: 0.3s;
+}
+
+.input-is-empty {
+  border-color: red !important;
+  transition-duration: 0.3s;
 }
 
 /*** responsive section ***/
