@@ -234,6 +234,10 @@ body {
   top: 0;
 }
 
+.set-display-to-none {
+  display: none !important;
+}
+
 /*** responsive section ***/
 @media screen and (max-width: 1145px) and (min-width: 1115px) {
   body {

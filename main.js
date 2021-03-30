@@ -2,7 +2,7 @@ const data = {
     todoList: [{
         id: 0,
         title: "thisCardIsTheDefaultCard",
-        color: "purple",
+        color: "yellow",
         priority: "high",
         state: "undone",
         isPinned: true
@@ -76,8 +76,12 @@ function addTodo(cardName, cardColor, cardPriority) {
 
 // console.log("add to do test;")
 addTodo("yasmin", "green", "high")
-addTodo("ahmadReza", "red", "medium")
-addTodo("ehsan", "yellow", "medium")
+addTodo("rosa", "green", "medium")
+addTodo("sahar", "green", "low")
+addTodo("farid", "green", "high")
+addTodo("goli", "green", "medium")
+addTodo("ahmadReza", "red", "low")
+addTodo("ehsan", "yellow", "high")
 
 // console.log(data.todoList)
 
@@ -208,14 +212,17 @@ function renderDom() {
 
         if (e.color === "yellow") {
             todoCard.style.backgroundColor = "orange";
+            todoCard.classList.add("bg-is-orange")
         }
 
         if (e.color === "red") {
             todoCard.style.backgroundColor = "#ED553B";
+            todoCard.classList.add("bg-is-red")
         }
 
         if (e.color === "green") {
             todoCard.style.backgroundColor = "forestgreen";
+            todoCard.classList.add("bg-is-green")
         }
 
         if (e.state === "done") {
@@ -235,11 +242,17 @@ function renderDom() {
         }
 
         container.appendChild(todoCard)
-
         todoCard.classList.add("todo-card-style")
-
     })
 }
 
 observe(sort)
 observe(renderDom)
+
+const sortGreenButton = document.querySelector(".green-button")
+sortGreenButton.addEventListener('click', showGreenCards)
+
+function showGreenCards() {
+    document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
+    document.querySelectorAll(".bg-is-green").forEach( e =>(e.style.display = 'block'))
+}
