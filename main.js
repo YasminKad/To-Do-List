@@ -264,3 +264,11 @@ function showRedCards() {
     document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
     document.querySelectorAll(".bg-is-red").forEach( e =>(e.style.display = 'block'))
 }
+
+const sortYellowButton = document.querySelector(".yellow-button")
+sortYellowButton.addEventListener('click', showYellowCards)
+
+function showYellowCards() {
+    document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
+    document.querySelectorAll(".bg-is-yellow").forEach( e =>(e.style.display = 'block'))
+}
