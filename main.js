@@ -180,7 +180,7 @@ function sort() {
     // console.log("sorted successfully")
 }
 
-sort();
+// sort();
 
 function renderDom() {
     const container = document.querySelector(".to-do-container")
@@ -278,6 +278,11 @@ function showYellowCards() {
     sortGreenButton.style.borderColor = 'white'
     document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
     document.querySelectorAll(".bg-is-yellow").forEach(e => (e.style.display = 'block'))
+}
+const cancelFilterButton = document.querySelector(".cancel-filter")
+cancelFilterButton.addEventListener('click', cancelFilterByColor)
+function cancelFilterByColor(){
+    document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'block'));
 }
 
 const addButton = document.querySelector(".add-button");

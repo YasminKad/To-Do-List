@@ -59,6 +59,15 @@ body {
   display: block;
   margin: 0 0 5px;
 }
+.filter-select-section .question span {
+  background-color: gray;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.filter-select-section .question span:hover {
+  cursor: pointer;
+}
 .filter-select-section .color-buttons {
   margin: auto;
   width: fit-content;
