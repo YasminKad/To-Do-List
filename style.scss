@@ -314,6 +314,9 @@ body {
   body {
     display: initial;
   }
+  .to-do-container {
+    overflow-y: visible;
+  }
   .navbar {
     height: fit-content;
   }
@@ -372,8 +375,11 @@ body {
     display: initial;
     height: 90vh;
   }
+  .to-do-container {
+    overflow-y: visible;
+  }
   .navbar {
-    height: inherit;
+    height: 92vw;
   }
   .page-title {
     margin: 20px 20px 20px 20px;

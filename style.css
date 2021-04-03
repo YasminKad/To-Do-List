@@ -271,6 +271,10 @@ body {
     display: initial;
   }
 
+  .to-do-container {
+    overflow-y: visible;
+  }
+
   .navbar {
     height: fit-content;
   }
@@ -325,8 +329,12 @@ body {
     height: 90vh;
   }
 
+  .to-do-container {
+    overflow-y: visible;
+  }
+
   .navbar {
-    height: inherit;
+    height: 92vw;
   }
 
   .page-title {
