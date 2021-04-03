@@ -69,12 +69,16 @@ function addTodo(cardName, cardColor, cardPriority) {
 
 // console.log("add to do test;")
 addTodo("yasmin", "green", "high")
-addTodo("rosa", "yellow", "medium")
+// addTodo("rosa", "yellow", "medium")
+// addTodo("goli", "yellow", "low")
 addTodo("sahar", "red", "low")
 addTodo("farid", "green", "high")
-addTodo("goli", "yellow", "medium")
-addTodo("ahmadReza", "red", "low")
-addTodo("ehsan", "green", "high")
+// addTodo("task3", "yellow", "medium")
+// addTodo("ahmadReza", "red", "low")
+// addTodo("task2", "yellow", "medium")
+// addTodo("ehsan", "green", "high")
+// addTodo("task1", "yellow", "medium")
+
 
 // console.log(data.todoList)
 
@@ -180,7 +184,7 @@ function sort() {
     // console.log("sorted successfully")
 }
 
-// sort();
+sort();
 
 function renderDom() {
     const container = document.querySelector(".to-do-container")
@@ -279,9 +283,11 @@ function showYellowCards() {
     document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'none'));
     document.querySelectorAll(".bg-is-yellow").forEach(e => (e.style.display = 'block'))
 }
+
 const cancelFilterButton = document.querySelector(".cancel-filter")
 cancelFilterButton.addEventListener('click', cancelFilterByColor)
-function cancelFilterByColor(){
+
+function cancelFilterByColor() {
     document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'block'));
 }
 
@@ -317,8 +323,10 @@ function checkValidationAndMakeACard() {
     }
 }
 
-function makeTodoCard(){
-    addTodo(taskName.value, selectors[1].value, selectors[0].value)
+function makeTodoCard() {
+    if (data.todoList.length >= 0) {
+        addTodo(taskName.value, selectors[1].value, selectors[0].value)
+    }
     taskName.classList.remove("input-is-empty", "input-is-okay");
     selectors.forEach(e => {
         e.classList.remove("input-is-empty", "input-is-okay");
@@ -328,5 +336,6 @@ function makeTodoCard(){
         e.value = ""
     })
 }
+
 observe(sort)
 observe(renderDom)
