@@ -225,6 +225,14 @@ function renderDom() {
         todoCard.appendChild(pinButton)
         pinButton.onclick = () => pin(e.id)
 
+        if (e.state === "done") {
+            pinButton.style.display = 'none'
+        }
+
+        if (e.state === "undone") {
+            pinButton.style.display = 'inline-block'
+        }
+
         const checkButton = document.createElement("button")
         checkButton.innerHTML = '<i class="fas fa-check"></i>'
         checkButton.classList.add("check-button")

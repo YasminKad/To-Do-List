@@ -79,7 +79,7 @@
       <workItem from="1617087907746" duration="18375000" />
       <workItem from="1617215488776" duration="26709000" />
       <workItem from="1617452782184" duration="1726000" />
-      <workItem from="1617454525654" duration="689000" />
+      <workItem from="1617454525654" duration="990000" />
     </task>
     <task id="LOCAL-00001" summary="reactivity, add, remove, change state, pin enabled">
       <created>1615975433616</created>
@@ -277,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617448166462</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="cancel filter button bug fixed + final appearance of cards">
+      <created>1617455459031</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1617455459031</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +304,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="UI designed + buttons added + filter section added + make todo section added + todo card info added ( !done the pinned bug! )" />
     <MESSAGE value="UI corrections" />
     <MESSAGE value="UI responsive design added" />
     <MESSAGE value="selector color bug fixed" />
@@ -322,7 +328,8 @@
     <MESSAGE value="unpin bug in done section fixed" />
     <MESSAGE value="done cards are sorted now" />
     <MESSAGE value="final appearance of the cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="final appearance of the cards" />
+    <MESSAGE value="cancel filter button bug fixed + final appearance of cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="cancel filter button bug fixed + final appearance of cards" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
