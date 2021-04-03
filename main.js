@@ -182,6 +182,19 @@ function sort() {
             }
         }
     )
+    done.sort((first,second) => {
+        if (priorityValues[first.priority] > priorityValues[second.priority]) {
+            // console.log("return 1")
+            return -1
+        }
+        if (priorityValues[first.priority] < priorityValues[second.priority]) {
+            // console.log("return -1")
+            return 1
+        } else {
+            // console.log("return 0")
+            return 0
+        }
+    })
     todoListCopy = [...pinned, ...sortedList, ...done]
     console.log("sort function called");
     // console.log(data.todoList)
