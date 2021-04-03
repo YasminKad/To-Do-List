@@ -65,6 +65,9 @@ function addTodo(cardName, cardColor, cardPriority) {
         isPinned: false
     }
     data.todoList = [...todoListCopy, todo]
+    console.log("addtodo called")
+    observe(sort)
+
 }
 
 console.log("add to do test;")
@@ -139,7 +142,7 @@ function pin(id) {
             if (todoListElement.isPinned === true) {
                 todoListElement.isPinned = false
                 removeTodo(id)
-                addTodo(todoListElement.name, todoListElement.color, todoListElement.priority)
+                data.todoList = [...todoListCopy, todoListElement]
                 break
             }
         }
@@ -180,11 +183,12 @@ function sort() {
         }
     )
     todoListCopy = [...pinned, ...sortedList, ...done]
+    console.log("sort function called");
     // console.log(data.todoList)
     // console.log("sorted successfully")
 }
 
-sort();
+// sort();
 
 function renderDom() {
     const container = document.querySelector(".to-do-container")
@@ -247,6 +251,7 @@ function renderDom() {
         container.appendChild(todoCard)
         todoCard.classList.add("todo-card-style")
     })
+    console.log("renderDom is being called")
 }
 
 const sortGreenButton = document.querySelector(".green-button")
@@ -327,6 +332,8 @@ function makeTodoCard() {
     if (data.todoList.length >= 0) {
         addTodo(taskName.value, selectors[1].value, selectors[0].value)
         console.log("todo added")
+        console.log(todoListCopy)
+        console.log(data.todoList)
     }
     taskName.classList.remove("input-is-empty", "input-is-okay");
     selectors.forEach(e => {
