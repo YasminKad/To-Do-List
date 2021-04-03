@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41dbc9f6-0da0-4179-bddf-4ecd2a944c9b" name="Default Changelist" comment="unpin bug in done section fixed">
+    <list default="true" id="41dbc9f6-0da0-4179-bddf-4ecd2a944c9b" name="Default Changelist" comment="final appearance of the cards">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
@@ -77,7 +77,9 @@
       <workItem from="1616913124895" duration="9216000" />
       <workItem from="1616923917870" duration="7640000" />
       <workItem from="1617087907746" duration="18375000" />
-      <workItem from="1617215488776" duration="12684000" />
+      <workItem from="1617215488776" duration="26709000" />
+      <workItem from="1617452782184" duration="1726000" />
+      <workItem from="1617454525654" duration="689000" />
     </task>
     <task id="LOCAL-00001" summary="reactivity, add, remove, change state, pin enabled">
       <created>1615975433616</created>
@@ -261,7 +263,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617432551038</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="done cards are sorted now">
+      <created>1617435767757</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1617435767757</updated>
+    </task>
+    <task id="LOCAL-00028" summary="final appearance of the cards">
+      <created>1617448166462</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1617448166462</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,8 +297,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="reactivity, add, remove, change state, pin enabled" />
-    <MESSAGE value="sort function for the main display added" />
     <MESSAGE value="UI designed + buttons added + filter section added + make todo section added + todo card info added ( !done the pinned bug! )" />
     <MESSAGE value="UI corrections" />
     <MESSAGE value="UI responsive design added" />
@@ -306,7 +320,9 @@
     <MESSAGE value="minor change in stylesheet" />
     <MESSAGE value="add to do sort bug fixed" />
     <MESSAGE value="unpin bug in done section fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="unpin bug in done section fixed" />
+    <MESSAGE value="done cards are sorted now" />
+    <MESSAGE value="final appearance of the cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="final appearance of the cards" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

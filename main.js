@@ -35,7 +35,6 @@ function observe(fn) {
 }
 
 function dep() {
-    // console.log(data.todoList)
     return data.todoList
 }
 
@@ -53,7 +52,6 @@ function createRandomId(num) {
     return rand
 }
 
-// console.log(createRandomId(10))
 
 function addTodo(cardName, cardColor, cardPriority) {
     const todo = {
@@ -65,15 +63,13 @@ function addTodo(cardName, cardColor, cardPriority) {
         isPinned: false
     }
     data.todoList = [...todoListCopy, todo]
-    console.log("addtodo called")
     observe(sort)
 
 }
 
-console.log("add to do test;")
 addTodo("yasmin", "green", "high")
 addTodo("rosa", "yellow", "medium")
-addTodo("goli", "yellow", "low")
+addTodo("goli", "red", "low")
 addTodo("sahar", "red", "low")
 addTodo("farid", "green", "high")
 addTodo("task3", "yellow", "medium")
@@ -82,20 +78,18 @@ addTodo("task2", "yellow", "medium")
 addTodo("ehsan", "green", "high")
 addTodo("task1", "yellow", "medium")
 
-
-// console.log(data.todoList)
-
 function removeTodo(id) {
+    let temp
     for (let i = 0; i < data.todoList.length; i++) {
         if (data.todoList[i].id === id) {
+            temp = data.todoList[i]
             todoListCopy.splice(i, 1)
             getArrayCopy()
-            break
+            return {...temp}
         }
     }
 }
 
-// console.log("remove test")
 removeTodo(data.todoList[1])
 
 function changeState(id) {
@@ -108,7 +102,6 @@ function changeState(id) {
                 temp = todoListElement
                 removeTodo(id)
                 data.todoList = [temp, ...todoListCopy]
-                // console.log("changed to undone " + `${temp.id}`)
                 break
             }
             if (todoListElement.state === "undone") {
@@ -118,7 +111,6 @@ function changeState(id) {
                 temp = todoListElement
                 removeTodo(id)
                 data.todoList = [...todoListCopy, temp]
-                // console.log("changed to done " +  `${todoListElement.id}`)
                 break
             }
             break
@@ -126,32 +118,40 @@ function changeState(id) {
     }
 }
 
-// console.log("change state test")
-// changeState(data.todoList[2].id)
-
 function pin(id) {
     for (const todoListElement of data.todoList) {
-        // console.log(todoListElement.id, id)
         if (todoListElement.id === id) {
-            if (todoListElement.isPinned === false) {
-                todoListElement.isPinned = true
-                removeTodo(id)
-                data.todoList = [todoListElement, ...todoListCopy]
-                break
+            if (todoListElement.state === "undone") {
+                if (todoListElement.isPinned === false) {
+                    todoListElement.isPinned = true
+                    removeTodo(id)
+                    data.todoList = [todoListElement, ...todoListCopy]
+                    break
+                }
+                if (todoListElement.isPinned === true) {
+                    todoListElement.isPinned = false
+                    removeTodo(id)
+                    data.todoList = [...todoListCopy, todoListElement]
+                    break
+                }
             }
-            if (todoListElement.isPinned === true) {
-                todoListElement.isPinned = false
-                removeTodo(id)
-                data.todoList = [...todoListCopy, todoListElement]
-                break
+            if (todoListElement.state === "done") {
+                if (todoListElement.isPinned === false) {
+                    todoListElement.isPinned = true
+                    removeTodo(id)
+                    data.todoList = [todoListElement, ...todoListCopy]
+                    break
+                }
+                if (todoListElement.isPinned === true) {
+                    todoListElement.isPinned = false
+                    removeTodo(id)
+                    data.todoList = [...todoListCopy, todoListElement]
+                    break
+                }
             }
         }
     }
 }
-
-// console.log("pin test")
-// console.log(data.todoList)
-// pin(data.todoList[1].id)
 
 function sort() {
     const {pinned, notPinned, done} = data.todoList.reduce((prev, curr) => {
@@ -170,46 +170,54 @@ function sort() {
     }, {pinned: [], notPinned: [], done: []})
     const sortedList = notPinned.sort((first, second) => {
             if (priorityValues[first.priority] > priorityValues[second.priority]) {
-                // console.log("return 1")
                 return -1
             }
             if (priorityValues[first.priority] < priorityValues[second.priority]) {
-                // console.log("return -1")
                 return 1
             } else {
-                // console.log("return 0")
                 return 0
             }
         }
     )
-    done.sort((first,second) => {
+    done.sort((first, second) => {
         if (priorityValues[first.priority] > priorityValues[second.priority]) {
-            // console.log("return 1")
             return -1
         }
         if (priorityValues[first.priority] < priorityValues[second.priority]) {
-            // console.log("return -1")
             return 1
         } else {
-            // console.log("return 0")
             return 0
         }
     })
     todoListCopy = [...pinned, ...sortedList, ...done]
-    console.log("sort function called");
-    // console.log(data.todoList)
-    // console.log("sorted successfully")
 }
-
-// sort();
 
 function renderDom() {
     const container = document.querySelector(".to-do-container")
     container.innerHTML = " "
     data.todoList.forEach(e => {
         const todoCard = document.createElement("div")
-        todoCard.innerText = `${e.title} ${e.priority} ${e.color} ${e.state} ${e.isPinned} ${e.id}`
         todoCard.id = e.id
+
+        const todoPriority = document.createElement("div")
+        todoPriority.classList.add("priority-stars")
+        if (e.priority === "high") {
+            todoPriority.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>'
+        }
+        if (e.priority === "medium") {
+            todoPriority.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i>'
+        }
+        if (e.priority === "low") {
+            todoPriority.innerHTML = '<i class="fas fa-star"></i>'
+        }
+        todoPriority.style.display = "inline-block"
+        todoCard.appendChild(todoPriority)
+
+        const todoTitle = document.createElement("div")
+        todoTitle.innerText = `${e.title}`
+        todoTitle.style.display = "inline-block"
+        todoTitle.style.fontWeight = "bold";
+        todoCard.appendChild(todoTitle)
 
         const pinButton = document.createElement("button")
         pinButton.innerHTML = '<i class="fas fa-thumbtack"></i>'
@@ -264,7 +272,6 @@ function renderDom() {
         container.appendChild(todoCard)
         todoCard.classList.add("todo-card-style")
     })
-    console.log("renderDom is being called")
 }
 
 const sortGreenButton = document.querySelector(".green-button")
@@ -307,6 +314,9 @@ cancelFilterButton.addEventListener('click', cancelFilterByColor)
 
 function cancelFilterByColor() {
     document.querySelectorAll(".todo-card-style").forEach(e => (e.style.display = 'block'));
+    sortRedButton.style.borderColor = 'white'
+    sortGreenButton.style.borderColor = 'white'
+    sortYellowButton.style.borderColor = 'white'
 }
 
 const addButton = document.querySelector(".add-button");
@@ -344,9 +354,6 @@ function checkValidationAndMakeACard() {
 function makeTodoCard() {
     if (data.todoList.length >= 0) {
         addTodo(taskName.value, selectors[1].value, selectors[0].value)
-        console.log("todo added")
-        console.log(todoListCopy)
-        console.log(data.todoList)
     }
     taskName.classList.remove("input-is-empty", "input-is-okay");
     selectors.forEach(e => {
