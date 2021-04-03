@@ -245,6 +245,11 @@ body {
   right: 2%;
   top: 0;
 }
+.todo-card-style .priority-stars {
+  width: 100px;
+  text-align: center;
+  margin-right: 10px;
+}
 
 .set-display-to-none {
   display: none !important;
