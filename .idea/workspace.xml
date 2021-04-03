@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41dbc9f6-0da0-4179-bddf-4ecd2a944c9b" name="Default Changelist" comment="minor change in stylesheet">
+    <list default="true" id="41dbc9f6-0da0-4179-bddf-4ecd2a944c9b" name="Default Changelist" comment="add to do sort bug fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
@@ -77,7 +77,7 @@
       <workItem from="1616913124895" duration="9216000" />
       <workItem from="1616923917870" duration="7640000" />
       <workItem from="1617087907746" duration="18375000" />
-      <workItem from="1617215488776" duration="9431000" />
+      <workItem from="1617215488776" duration="10928000" />
     </task>
     <task id="LOCAL-00001" summary="reactivity, add, remove, change state, pin enabled">
       <created>1615975433616</created>
@@ -240,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617429476888</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="add to do sort bug fixed">
+      <created>1617430168297</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1617430168297</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +290,8 @@
     <MESSAGE value="empty to do list bug fixed" />
     <MESSAGE value="medium cards sorting bug fixed" />
     <MESSAGE value="minor change in stylesheet" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor change in stylesheet" />
+    <MESSAGE value="add to do sort bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="add to do sort bug fixed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
