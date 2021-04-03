@@ -1,7 +1,7 @@
 const data = {
     todoList: []
 }
-const priorityValues = {high: 2, medium: 1, low: 1}
+const priorityValues = {high: 2, medium: 1, low: 0}
 let todoListCopy = data.todoList
 let dependencies = []
 
@@ -67,17 +67,17 @@ function addTodo(cardName, cardColor, cardPriority) {
     data.todoList = [...todoListCopy, todo]
 }
 
-// console.log("add to do test;")
+console.log("add to do test;")
 addTodo("yasmin", "green", "high")
-// addTodo("rosa", "yellow", "medium")
-// addTodo("goli", "yellow", "low")
+addTodo("rosa", "yellow", "medium")
+addTodo("goli", "yellow", "low")
 addTodo("sahar", "red", "low")
 addTodo("farid", "green", "high")
-// addTodo("task3", "yellow", "medium")
-// addTodo("ahmadReza", "red", "low")
-// addTodo("task2", "yellow", "medium")
-// addTodo("ehsan", "green", "high")
-// addTodo("task1", "yellow", "medium")
+addTodo("task3", "yellow", "medium")
+addTodo("ahmadReza", "red", "low")
+addTodo("task2", "yellow", "medium")
+addTodo("ehsan", "green", "high")
+addTodo("task1", "yellow", "medium")
 
 
 // console.log(data.todoList)
@@ -148,7 +148,7 @@ function pin(id) {
 
 // console.log("pin test")
 // console.log(data.todoList)
-pin(data.todoList[1].id)
+// pin(data.todoList[1].id)
 
 function sort() {
     const {pinned, notPinned, done} = data.todoList.reduce((prev, curr) => {
@@ -326,6 +326,7 @@ function checkValidationAndMakeACard() {
 function makeTodoCard() {
     if (data.todoList.length >= 0) {
         addTodo(taskName.value, selectors[1].value, selectors[0].value)
+        console.log("todo added")
     }
     taskName.classList.remove("input-is-empty", "input-is-okay");
     selectors.forEach(e => {
